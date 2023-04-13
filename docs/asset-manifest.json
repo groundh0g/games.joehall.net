@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "https://games.joehall.net/static/css/main.3f465015.css",
+    "main.js": "https://games.joehall.net/static/js/main.edc6e979.js",
+    "static/js/787.d37de791.chunk.js": "https://games.joehall.net/static/js/787.d37de791.chunk.js",
+    "static/media/icon-wordplay.svg": "https://games.joehall.net/static/media/icon-wordplay.e4f90e0a0ce67a9f766f2d72793e8af7.svg",
+    "static/media/icon-word-nerd.svg": "https://games.joehall.net/static/media/icon-word-nerd.49854ab434cba21e78e904e116be8c84.svg",
+    "static/media/arcade-cabinets.svg": "https://games.joehall.net/static/media/arcade-cabinets.462f7bd6ff96daae4e9725094077286d.svg",
+    "index.html": "https://games.joehall.net/index.html",
+    "main.3f465015.css.map": "https://games.joehall.net/static/css/main.3f465015.css.map",
+    "main.edc6e979.js.map": "https://games.joehall.net/static/js/main.edc6e979.js.map",
+    "787.d37de791.chunk.js.map": "https://games.joehall.net/static/js/787.d37de791.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f465015.css",
+    "static/js/main.edc6e979.js"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "https://games.joehall.net/wordnerd/static/css/main.e2dcb819.css",
+    "main.js": "https://games.joehall.net/wordnerd/static/js/main.e1c04b2a.js",
+    "static/js/496.3f3b0613.chunk.js": "https://games.joehall.net/wordnerd/static/js/496.3f3b0613.chunk.js",
+    "static/media/fa-solid-900.ttf": "https://games.joehall.net/wordnerd/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/fa-brands-400.ttf": "https://games.joehall.net/wordnerd/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/fa-solid-900.woff2": "https://games.joehall.net/wordnerd/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "https://games.joehall.net/wordnerd/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/fa-regular-400.ttf": "https://games.joehall.net/wordnerd/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/you-lost.svg": "https://games.joehall.net/wordnerd/static/media/you-lost.bc3d26fcb8f4b06ab440a4fe3fe7a349.svg",
+    "static/media/you-won.svg": "https://games.joehall.net/wordnerd/static/media/you-won.ac88961f4b593bc1858c19d2ced7ce8e.svg",
+    "static/media/fa-regular-400.woff2": "https://games.joehall.net/wordnerd/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/fa-v4compatibility.ttf": "https://games.joehall.net/wordnerd/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/logo.svg": "https://games.joehall.net/wordnerd/static/media/logo.6e6609b082ec88f9d80e6e0c7f131d69.svg",
+    "static/media/fa-v4compatibility.woff2": "https://games.joehall.net/wordnerd/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
+    "index.html": "https://games.joehall.net/wordnerd/index.html",
+    "main.e2dcb819.css.map": "https://games.joehall.net/wordnerd/static/css/main.e2dcb819.css.map",
+    "main.e1c04b2a.js.map": "https://games.joehall.net/wordnerd/static/js/main.e1c04b2a.js.map",
+    "496.3f3b0613.chunk.js.map": "https://games.joehall.net/wordnerd/static/js/496.3f3b0613.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2dcb819.css",
+    "static/js/main.e1c04b2a.js"
+  ]
+}
