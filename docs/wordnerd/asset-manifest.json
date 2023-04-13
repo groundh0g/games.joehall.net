@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://games.joehall.net/wordnerd/static/css/main.e2dcb819.css",
-    "main.js": "https://games.joehall.net/wordnerd/static/js/main.e1c04b2a.js",
-    "static/js/496.3f3b0613.chunk.js": "https://games.joehall.net/wordnerd/static/js/496.3f3b0613.chunk.js",
+    "main.js": "https://games.joehall.net/wordnerd/static/js/main.bad5f862.js",
+    "static/js/496.3dd4e66e.chunk.js": "https://games.joehall.net/wordnerd/static/js/496.3dd4e66e.chunk.js",
     "static/media/fa-solid-900.ttf": "https://games.joehall.net/wordnerd/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/fa-brands-400.ttf": "https://games.joehall.net/wordnerd/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
     "static/media/fa-solid-900.woff2": "https://games.joehall.net/wordnerd/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
@@ -16,11 +16,11 @@
     "static/media/fa-v4compatibility.woff2": "https://games.joehall.net/wordnerd/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
     "index.html": "https://games.joehall.net/wordnerd/index.html",
     "main.e2dcb819.css.map": "https://games.joehall.net/wordnerd/static/css/main.e2dcb819.css.map",
-    "main.e1c04b2a.js.map": "https://games.joehall.net/wordnerd/static/js/main.e1c04b2a.js.map",
-    "496.3f3b0613.chunk.js.map": "https://games.joehall.net/wordnerd/static/js/496.3f3b0613.chunk.js.map"
+    "main.bad5f862.js.map": "https://games.joehall.net/wordnerd/static/js/main.bad5f862.js.map",
+    "496.3dd4e66e.chunk.js.map": "https://games.joehall.net/wordnerd/static/js/496.3dd4e66e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2dcb819.css",
-    "static/js/main.e1c04b2a.js"
+    "static/js/main.bad5f862.js"
   ]
 }
