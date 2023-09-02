@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://games.joehall.net/wordswithjoe/static/css/main.90c93472.css",
-    "main.js": "https://games.joehall.net/wordswithjoe/static/js/main.2d451289.js",
+    "main.css": "https://games.joehall.net/wordswithjoe/static/css/main.eec76186.css",
+    "main.js": "https://games.joehall.net/wordswithjoe/static/js/main.8bfb4528.js",
     "static/js/496.2b02d53f.chunk.js": "https://games.joehall.net/wordswithjoe/static/js/496.2b02d53f.chunk.js",
     "static/media/fa-solid-900.ttf": "https://games.joehall.net/wordswithjoe/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
     "static/media/fa-brands-400.ttf": "https://games.joehall.net/wordswithjoe/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
@@ -9,7 +9,13 @@
     "static/media/fa-brands-400.woff2": "https://games.joehall.net/wordswithjoe/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
     "static/media/fa-regular-400.ttf": "https://games.joehall.net/wordswithjoe/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
     "static/media/fa-regular-400.woff2": "https://games.joehall.net/wordswithjoe/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/silly.svg": "https://games.joehall.net/wordswithjoe/static/media/silly.4a50a69916ed957c8c22edab9ea2ba86.svg",
+    "static/media/thinking.svg": "https://games.joehall.net/wordswithjoe/static/media/thinking.61787c184bb916fb6512eb7649ae65e2.svg",
     "static/media/fa-v4compatibility.ttf": "https://games.joehall.net/wordswithjoe/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/happy.svg": "https://games.joehall.net/wordswithjoe/static/media/happy.4db2fafdabb01e8c10f0514f0e788595.svg",
+    "static/media/raised-brow.svg": "https://games.joehall.net/wordswithjoe/static/media/raised-brow.2ba849afbc07491f68702f7c71b1e040.svg",
+    "static/media/sad.svg": "https://games.joehall.net/wordswithjoe/static/media/sad.f642293fcf4ad20ac9a9bb70db3fdf34.svg",
+    "static/media/shocked.svg": "https://games.joehall.net/wordswithjoe/static/media/shocked.1b7a9dc01f9eb170c80199619c0c464f.svg",
     "static/media/resign.svg": "https://games.joehall.net/wordswithjoe/static/media/resign.3287952018f9b6722def7898f3e83133.svg",
     "static/media/shuffle.svg": "https://games.joehall.net/wordswithjoe/static/media/shuffle.95a326a76b39a5bde34bd81dfae49090.svg",
     "static/media/recall.svg": "https://games.joehall.net/wordswithjoe/static/media/recall.5530ce9a4a8099555709587159740c0c.svg",
@@ -17,12 +23,12 @@
     "static/media/swap.svg": "https://games.joehall.net/wordswithjoe/static/media/swap.721ed6da95e5164cec3da50965934a3d.svg",
     "static/media/play.svg": "https://games.joehall.net/wordswithjoe/static/media/play.36c7e9ffd7f8a2a89490810bd097493f.svg",
     "index.html": "https://games.joehall.net/wordswithjoe/index.html",
-    "main.90c93472.css.map": "https://games.joehall.net/wordswithjoe/static/css/main.90c93472.css.map",
-    "main.2d451289.js.map": "https://games.joehall.net/wordswithjoe/static/js/main.2d451289.js.map",
+    "main.eec76186.css.map": "https://games.joehall.net/wordswithjoe/static/css/main.eec76186.css.map",
+    "main.8bfb4528.js.map": "https://games.joehall.net/wordswithjoe/static/js/main.8bfb4528.js.map",
     "496.2b02d53f.chunk.js.map": "https://games.joehall.net/wordswithjoe/static/js/496.2b02d53f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90c93472.css",
-    "static/js/main.2d451289.js"
+    "static/css/main.eec76186.css",
+    "static/js/main.8bfb4528.js"
   ]
 }
