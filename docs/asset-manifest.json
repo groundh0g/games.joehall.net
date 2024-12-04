@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "https://games.joehall.net/static/css/main.da42165d.css",
-    "main.js": "https://games.joehall.net/static/js/main.81d3cc90.js",
+    "main.css": "https://games.joehall.net/static/css/main.0ca1ba52.css",
+    "main.js": "https://games.joehall.net/static/js/main.58c4c87b.js",
     "static/js/787.d37de791.chunk.js": "https://games.joehall.net/static/js/787.d37de791.chunk.js",
     "static/media/icon-wordswithjoe.svg": "https://games.joehall.net/static/media/icon-wordswithjoe.790d96f8e0f809884fba10791a4174f8.svg",
+    "static/media/icon-wordplay-archived.svg": "https://games.joehall.net/static/media/icon-wordplay-archived.0d8a4c9bbec3397ae9ea1440edc75e52.svg",
     "static/media/icon-wordnerd.svg": "https://games.joehall.net/static/media/icon-wordnerd.60d16d29314d877c0f198249f1be163d.svg",
     "static/media/arcade-cabinets.svg": "https://games.joehall.net/static/media/arcade-cabinets.462f7bd6ff96daae4e9725094077286d.svg",
     "index.html": "https://games.joehall.net/index.html",
-    "main.da42165d.css.map": "https://games.joehall.net/static/css/main.da42165d.css.map",
-    "main.81d3cc90.js.map": "https://games.joehall.net/static/js/main.81d3cc90.js.map",
+    "main.0ca1ba52.css.map": "https://games.joehall.net/static/css/main.0ca1ba52.css.map",
+    "main.58c4c87b.js.map": "https://games.joehall.net/static/js/main.58c4c87b.js.map",
     "787.d37de791.chunk.js.map": "https://games.joehall.net/static/js/787.d37de791.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da42165d.css",
-    "static/js/main.81d3cc90.js"
+    "static/css/main.0ca1ba52.css",
+    "static/js/main.58c4c87b.js"
   ]
 }

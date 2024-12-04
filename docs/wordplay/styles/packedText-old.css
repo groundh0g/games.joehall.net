@@ -1,0 +1,40 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.textSprite { overflow:hidden; background-repeat: no-repeat;background-image:url('images/packedText.png'); /*border:1px solid black;*/}
+
+table.hud td { border-bottom:1px solid #000; height:18px; }
+
+.txtScoreCPU {width:84px; height:18px; background-position: -0px -288px}
+.txtScorePlayer {width:84px; height:18px; background-position: -0px -306px}
+.txtTilesLeft {width:84px; height:18px; background-position: -0px -378px}
+
+.txtWaitingOnPlayer {width:115px; height:18px; background-position: -0px -414px}
+
+.txtCheckWord {width:200px; height:18px; background-position: -0px -0px}
+.txtDifficulty {width:200px; height:18px; background-position: -0px -18px}
+.txtEasier {width:200px; height:18px; background-position: -0px -36px}
+.txtEasiest {width:200px; height:18px; background-position: -0px -54px}
+.txtEasy {width:200px; height:18px; background-position: -0px -72px}
+.txtEndGameCPU {width:200px; height:18px; background-position: -0px -90px}
+.txtEndGamePlayer {width:200px; height:18px; background-position: -0px -108px}
+.txtEndGameTie {width:200px; height:18px; background-position: -0px -126px}
+.txtHard {width:200px; height:18px; background-position: -0px -144px}
+.txtHarder {width:200px; height:18px; background-position: -0px -162px}
+.txtHardest {width:200px; height:18px; background-position: -0px -180px}
+.txtMatchMe {width:200px; height:18px; background-position: -0px -198px}
+.txtNormal {width:200px; height:18px; background-position: -0px -216px}
+.txtNumber {width:200px; height:18px; background-position: -0px -234px}
+.txtNumberSmall {width:200px; height:18px; background-position: -0px -252px}
+.txtPts {width:200px; height:18px; background-position: -0px -270px}
+.txtThinking {width:200px; height:18px; background-position: -0px -324px}
+.txtThinkingSecBegin {width:200px; height:18px; background-position: -0px -342px}
+.txtThinkingSecEnd {width:200px; height:18px; background-position: -0px -360px}
+.txtTilesPlayed {width:200px; height:18px; background-position: -0px -396px}

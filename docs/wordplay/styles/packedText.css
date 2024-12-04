@@ -1,0 +1,45 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.textSprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url('images/packedText.png');}
+
+.txtNumbers {width:100px; height:12px; background-position: -0px -166px; margin-top:3px; }
+
+.txtNum0 {float:left; margin-left:1px; width:10px; height:12px; background-position: -0px -166px; margin-top:3px;}
+.txtNum1 {float:left; margin-left:1px; width:6px; height:12px; background-position: -11px -166px; margin-top:3px;}
+.txtNum2 {float:left; margin-left:1px; width:8px; height:12px; background-position: -18px -166px; margin-top:3px;}
+.txtNum3 {float:left; margin-left:1px; width:8px; height:12px; background-position: -27px -166px; margin-top:3px;}
+.txtNum4 {float:left; margin-left:1px; width:8px; height:12px; background-position: -36px -166px; margin-top:3px;}
+.txtNum5 {float:left; margin-left:1px; width:8px; height:12px; background-position: -45px -166px; margin-top:3px;}
+.txtNum6 {float:left; margin-left:1px; width:8px; height:12px; background-position: -54px -166px; margin-top:3px;}
+.txtNum7 {float:left; margin-left:1px; width:8px; height:12px; background-position: -63px -166px; margin-top:3px;}
+.txtNum8 {float:left; margin-left:1px; width:8px; height:12px; background-position: -73px -166px; margin-top:3px;}
+.txtNum9 {float:left; margin-left:1px; width:8px; height:12px; background-position: -82px -166px; margin-top:3px;}
+.txtNumPlus {float:left; margin-left:1px; width:8px; height:12px; background-position: -91px -166px; margin-top:3px;}
+
+.txtDiffEasier {width:98px; height:16px; background-position: -0px -0px; margin-top:1px; }
+.txtDiffEasiest {width:104px; height:16px; background-position: -0px -16px; margin-top:1px; }
+.txtDiffEasy {width:90px; height:16px; background-position: -1px -32px; margin-top:1px; }
+.txtDiffHard {width:90px; height:16px; background-position: -0px -48px; margin-top:1px; }
+.txtDiffHarder {width:102px; height:16px; background-position: -0px -64px; margin-top:1px; }
+.txtDiffHardest {width:108px; height:16px; background-position: -0px -80px; margin-top:1px; }
+.txtDiffMatchMe {width:116px; height:16px; background-position: -0px -96px; margin-top:1px; }
+.txtDiffNormal {width:102px; height:16px; background-position: -0px -112px; margin-top:1px; }
+.txtEndGameLost {width:70px; height:12px; background-position: -0px -128px; margin-top:3px; }
+.txtEndGameTie {width:78px; height:14px; background-position: -0px -140px; margin-top:2px; }
+.txtEndGameWon {width:74px; height:12px; background-position: -0px -154px; margin-top:3px; }
+.txtScoreCPU {width:62px; height:10px; background-position: -0px -178px; margin-top:4px; }
+.txtScorePlayer {width:64px; height:12px; background-position: -62px -178px; margin-top:3px; }
+.txtThinking {width:64px; height:14px; background-position: -0px -190px; margin-top:2px; }
+.txtTilesLeft {width:54px; height:14px; background-position: -64px -190px; margin-top:2px; }
+.txtTryWordsHere {width:108px; height:12px; background-position: -0px -204px; margin-top:3px; }
+.txtWaitingOnPlayer {width:108px; height:14px; background-position: -0px -216px; margin-top:2px; }
+
+.txtThinkingSec {width:20px; height:14px; background-position: -91px -139px; margin-top:2px; }

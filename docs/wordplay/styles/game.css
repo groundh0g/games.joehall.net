@@ -1,0 +1,114 @@
+/* blank wood tiles from: http://www.fuzzimo.com/free-hi-res-wooden-scrabble-letter-tiles/ */
+
+/* http://www.search-this.com/2008/05/15/easy-vertical-centering-with-css/ */
+/* http://blog.themeforest.net/tutorials/vertical-centering-with-css/ [Method #3] */
+
+html,body { height:100%; margin:0; padding:0; background-image:url('images/cartoon_clouds_by_groundh0g.png'); }
+body { font-family: "Georgia", serif; min-width:770px; min-height:570px; }
+
+#vertical{
+    float:left;
+	height:50%;
+	margin-top:-286px;
+	width:100%;
+}
+#mainDiv {
+    clear:both;
+    width:772px;
+    margin-left:auto;
+    margin-right:auto;
+    height:572px;
+    border:1px solid #000;
+    background:#666;
+    overflow:hidden;
+    text-align:left;
+}
+
+table.hud tr td { border-bottom:1px solid #000; height:18px; }
+
+.sprite { background-repeat: no-repeat; background-image:url('images/packed.png');}
+
+.cellEmpty {width:38px; height:38px; background-position: -40px -58px}
+.cellCenter {width:38px; height:38px; background-position: -320px -18px}
+.cellDL {width:38px; height:38px; background-position: -280px -18px}
+.cellDW {width:38px; height:38px; background-position: -400px -18px}
+.cellTL {width:38px; height:38px; background-position: -360px -18px}
+.cellTW {width:38px; height:38px; background-position: -0px -58px}
+
+.difficulty {width:100px; height:16px; background-position: -408px -0px}
+.difficultyDisabled {width:100px; height:16px; background-position: -0px -0px}
+.difficultySlider {width:11px; height:16px; background-position: -311px -0px}
+
+.progress {width:100px; height:16px; background-position: -204px -0px}
+.progressDisabled {width:100px; height:16px; background-position: -102px -0px}
+
+.tabsDisabled {width:193px; height:82px; background-position: -80px -58px}
+
+.wood1 {width:38px; height:38px; background-position: -40px -18px}
+.wood2 {width:38px; height:38px; background-position: -80px -18px}
+.wood3 {width:38px; height:38px; background-position: -120px -18px}
+.wood4 {width:38px; height:38px; background-position: -240px -18px}
+
+.wood1Played {width:38px; height:38px; background-position: -0px -18px}
+.wood2Played {width:38px; height:38px; background-position: -200px -18px}
+.wood3Played {width:38px; height:38px; background-position: -160px -18px}
+.wood4Played {width:38px; height:38px; background-position: -440px -18px}
+
+
+button { width:100%;  }
+
+.aiProgressBar { width:100px; height:16px; margin-left:10px; margin-top:2px; margin-bottom:2px; }
+
+.aiDifficulty { height:16px; width:100px; margin-top:2px; margin-bottom:2px; }
+.aiDifficultyActive { width:100px; height:16px; padding-left:5px; }
+.aiDifficultyCell { float:left; width:11px; height:16px; }
+
+.tabItem     { float:left; width:23px; height:54px; margin-top:28px; background-image:url('images/packed.png'); }
+
+.tabItemBug  { background-position:-195px -170px; }
+.tabItemHelp { background-position:-218px -170px; }
+.tabItemNew  { background-position:-268px -170px; margin-left:27px; }
+.tabItemHint { background-position:-291px -170px; }
+.tabItemSkip { background-position:-341px -170px; margin-left:27px; }
+.tabItemSwap { background-position:-364px -170px; }
+.tabItemPlay { background-position:-421px -86px; margin-left:27px; }
+.tabItemUndo { background-position:-444px -86px; }
+
+.tabItemBugHover  { background-position:0px -170px; }
+.tabItemHelpHover { background-position:-23px -170px; }
+.tabItemNewHover  { background-position:-73px -170px; margin-left:27px; }
+.tabItemHintHover { background-position:-96px -170px; }
+.tabItemSkipHover { background-position:-146px -170px; margin-left:27px; }
+.tabItemSwapHover { background-position:-169px -170px; }
+.tabItemPlayHover { background-position:-146px -254px; margin-left:27px; }
+.tabItemUndoHover { background-position:-169px -254px; }
+
+.playerTileHome { width:38px; height:38px; line-height:38px; z-index:1; }
+.playerTile { width:38px; height:38px; line-height:38px; z-index:55; /*float:left; z-index:10; */ }
+
+.cell 
+{
+	width:38px; height:38px;
+	line-height:38px;
+	text-align:center;
+}
+
+.boardCellPlaying { opacity:0.7; -moz-opacity:0.7; filter:alpha(opacity=70); }
+
+.letterTile {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+.letterScore {
+	font-size:0.75em;
+}
+
+#playerTiles { width:40px; cursor:move; }
+
+/*
+ul li a:link,
+ul li a:visited,
+ul li a:hover,
+ul li a:active { text-decoration:none; color:#ddd; }
+*/

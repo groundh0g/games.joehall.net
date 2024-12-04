@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<link type="text/css" href="styles/reset.css" rel="stylesheet" />
+		<link type="text/css" href="styles/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		<link type="text/css" href="styles/packedText.css" rel="stylesheet" />
+		<link type="text/css" href="styles/game.css" rel="stylesheet" />
+
+		<script type="text/javascript" src="script/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="script/jquery-ui-1.8.16.custom.min.js"></script>
+
+		<script type="text/javascript" src="script/task.js"></script>
+		<script type="text/javascript" src="script/game.words.js"></script>
+		<script type="text/javascript" src="script/game.objects.js"></script>
+		<script type="text/javascript" src="script/game.ai.js"></script>
+		<script type="text/javascript" src="script/game.debug.js"></script>
+
+<!--
+	=== TODO ===
+	1. Swap Tiles
+	2. Reorder / shuffle tiles
+	3. Dragable difficulty slider
+	4. Implement help / tutorial - include "click play to commit" instruction / animation
+	5. Match Me - different visual style?
+	6. Add "sec" to end of AI countdown?
+-->
+
+		<script type="text/javascript">
+			function OnTabEnter(id) { 
+			//alert("!");
+				//var num = (id == "Play" || id == "Undo") ? "2" : "";
+				//$("#cmd"+id).attr("class", "tabItem tabHover" + num + " tabItem" + id);
+				$("#cmd"+id).attr("class", "tabItem sprite tabItem" + id + "Hover");
+			};
+			
+			function OnTabLeave(id) { 
+				//var num = (id == "Play" || id == "Undo") ? "2" : "";
+				//$("#cmd"+id).attr("class", "tabItem tabEnabled" + num + " tabItem" + id);
+				$("#cmd"+id).attr("class", "tabItem sprite tabItem" + id);
+			};
+			
+			function TestWord() {
+				var text = $("#txtWord").val().toLowerCase();
+				if(text.length == 0) {
+					$("#txtWord").css("background-color","transparent");
+				} else if(WordHelper.FindWord(text) < 0) {
+					$("#txtWord").css("background-color","#faa");
+				} else {
+					$("#txtWord").css("background-color","#afa");
+				}
+			};
+						
+			$(document).ready(function() {
+				
+				$("#dif0").click(function () { gameInstance.SetAiDifficulty(0); }).attr("title","Easiest");
+				$("#dif1").click(function () { gameInstance.SetAiDifficulty(1); }).attr("title","Easier");
+				$("#dif2").click(function () { gameInstance.SetAiDifficulty(2); }).attr("title","Easy");
+				$("#dif3").click(function () { gameInstance.SetAiDifficulty(3); }).attr("title","Normal");
+				$("#dif4").click(function () { gameInstance.SetAiDifficulty(4); }).attr("title","Hard");
+				$("#dif5").click(function () { gameInstance.SetAiDifficulty(5); }).attr("title","Harder");
+				$("#dif6").click(function () { gameInstance.SetAiDifficulty(6); }).attr("title","Hardest");
+				$("#dif7").click(function () { gameInstance.SetAiDifficulty(7); }).attr("title","Match Me");
+
+				$("#cmdBug")
+					.attr("title","Generate debugging data.")
+					.mouseenter(function () { OnTabEnter("Bug"); })
+					.mouseleave(function () { OnTabLeave("Bug"); })
+					.click(function () { SaveState(); });
+				$("#cmdHelp")
+					.attr("title","What am I supposed to be doing?")
+					.mouseenter(function () { OnTabEnter("Help"); })
+					.mouseleave(function () { OnTabLeave("Help"); })
+					.click(function () { alert("Help goes here."); });
+				$("#cmdNew")
+					.attr("title","Start a new game.")
+					.mouseenter(function () { OnTabEnter("New"); })
+					.mouseleave(function () { OnTabLeave("New"); })
+					.click(function () { if(confirm('Start a new game?')){ InitGame(); } });
+				$("#cmdHint")
+					.attr("title","Help me! I'm stuck.")
+					.mouseenter(function () { OnTabEnter("Hint"); })
+					.mouseleave(function () { OnTabLeave("Hint"); })
+					.click(function () { StartAI_Hint(); });
+				$("#cmdSkip")
+					.attr("title","Skip this turn. Let the CPU catch up.")
+					.mouseenter(function () { OnTabEnter("Skip"); })
+					.mouseleave(function () { OnTabLeave("Skip"); })
+					.click(function () { gameInstance.UiSkipTurn(0); });
+				$("#cmdSwap")
+					.attr("title","I don't like these tiles. Gimme more.")
+					.mouseenter(function () { OnTabEnter("Swap"); })
+					.mouseleave(function () { OnTabLeave("Swap"); })
+					.click(function () { alert("Not Implemented Yet"); });
+				$("#cmdPlay")
+					.attr("title","This is some of my best work. Beat that!")
+					.mouseenter(function () { OnTabEnter("Play"); })
+					.mouseleave(function () { OnTabLeave("Play"); })
+					.click(function () { gameInstance.ValidatePlayerMove(); });
+				$("#cmdUndo")
+					.attr("title","Oopsies! I didn't mean to play there.")
+					.mouseenter(function () { OnTabEnter("Undo"); })
+					.mouseleave(function () { OnTabLeave("Undo"); })
+					.click(function () { gameInstance.UiRevertPlayerTiles(); });
+					
+				OnTabLeave("Bug");
+				OnTabLeave("Help");
+				OnTabLeave("New");
+				OnTabLeave("Hint");
+				OnTabLeave("Skip");
+				OnTabLeave("Swap");
+				OnTabLeave("Play");
+				OnTabLeave("Undo");
+			
+				TaskLoadWords.StartTask(null);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="vertical"></div>
+		<div id="mainDiv">
+		
+		<!-- LOADING PANEL -->
+		<div id="loadingPanel">
+			<table border="0" cellpadding="0" cellspacing="0" style="width:772px; height:572px; background-color:#ada;">
+				<tr><td style="vertical-align:middle; text-align:center; height:550px;">
+					<span style="font-size:1.2em; font-weight:bold;">GrowYourKnow.com</span><br/>
+					<span>presents</span>
+					<h1>WordPlay!</h1>
+					<span id="loadingMessage" style="font-size:0.8em;">&nbsp;</span>
+					</td></tr>
+				<tr><td><div id="loadingProgress" style="height:14px; background-color:#0c2; border:solid 3px #ada;">&nbsp;</div></td></tr>
+			</table>
+		</div>
+
+		<!-- BOARD PANEL -->
+		<div id="boardPanel" style="display:none; width:100%;">
+			<div style="width:772px; height:572px; margin:auto; border:solid 1px gray; background-image:url('images/wordplay-layout.png');">
+				<div id="boardHud" style="float:left; width:200px; height:570px;">
+					<table border="0" cellpadding="0" cellspacing="0" style="width:200px; height:276px;">
+						<tr><td style="width:150px; height:275px; vertical-align:top;">
+							<div style="width:120px; padding-left:20px; padding-top:45px;">
+							<table class="hud" style="width:100%; height:230px;">
+								<tr><td><div class="textSprite txtScorePlayer"></div></td><td><div id="scorePlayer"></div></td></tr>
+								<tr><td><div class="textSprite txtScoreCPU"></div></td><td><div id="scoreCPU"></div></td></tr>
+								<tr><td><div class="textSprite txtTilesLeft"></div></td><td><div id="tilesLeft"></div></td></tr>
+								<tr><td colspan="2"><div id="lblDiff" class="textSprite txtDiffNormal"></div></td></tr>
+								<tr><td class="hudText hudTextSmall" colspan="2" style="padding-left:9px;">
+										<div class="aiDifficulty sprite difficultyDisabled">
+											<div id="allDif" class="aiDifficultyActive sprite difficulty">
+												<div id="dif0" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif1" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif2" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif3" class="aiDifficultyCell sprite difficultySlider">&nbsp;</div>
+												<div id="dif4" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif5" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif6" class="aiDifficultyCell">&nbsp;</div>
+												<div id="dif7" class="aiDifficultyCell">&nbsp;</div>
+											</div>
+										</div>
+								</td></tr>
+								<tr><td colspan="2"><div id="lblMsg" class="textSprite txtWaitingOnPlayer" style="float:left;"></div><div id="lblTimeLeft" style="float:left; margin-left:3px;"></div><div id="lblTimeLeftSec" class="textSprite txtThinkingSec" style="float:left; margin-left:3px; display:none;"></div></td></tr>
+								<tr><td colspan="2">
+									<div class="aiProgressBar sprite progressDisabled"><div id="aiProgress" class="sprite progress" style="height:100%; width:1px;">&nbsp;</div></div>
+								</td></tr>
+								<tr><td colspan="2" style="border:none;"><div class="textSprite txtTryWordsHere"></div></td></tr>
+								<tr><td colspan="2" style="border:none;">
+									<input type="text" id="txtWord" onkeyup="TestWord();" value="[click]" onfocus="if(this.value == '[click]') { this.value = ''; }" onblur="if(this.value == '') { this.value = '[click]'; }" style="height:20px; width:100%; background-color:transparent; border:none;" />
+								</td></tr>
+								<tr><td style="border:none;">&nbsp;</td></tr>
+							</table>
+							</div>
+						</td><td style="width:50px; vertical-align:top;">
+							<div style="width:38px; height:266px; margin-top:5px; margin-left:7px;"> <div id="playerTiles"></div></div>
+						</td></tr>
+						<tr><td colspan="2">
+							<div class="sprite tabsDisabled" style="margin-left:4px;">
+								<div id="allTabs">
+									<div id="cmdBug"  class="tabItem sprite tabItemBug">&nbsp;</div>
+									<div id="cmdHelp" class="tabItem sprite tabItemHelp">&nbsp;</div>
+									<div id="cmdNew"  class="tabItem sprite tabItemNew">&nbsp;</div>
+									<div id="cmdHint" class="tabItem sprite tabItemHint">&nbsp;</div>
+									<div id="cmdSkip" class="tabItem sprite tabItemSkip">&nbsp;</div>
+									<div id="cmdSwap" class="tabItem sprite tabItemSwap">&nbsp;</div>
+									<div id="cmdPlay" class="tabItem sprite tabItemPlay" style="display:none;">&nbsp;</div>
+									<div id="cmdUndo" class="tabItem sprite tabItemUndo" style="display:none;">&nbsp;</div>
+								</div>
+							</div>
+						</td></tr>
+						<tr><td colspan="2" style="text-align:center; padding-top:20px;">
+							<a href="http://www.fauxcabulary.org/" target="_blank"><img src="images/ad-fauxcabulary.png" border="0"/></a>
+						</td></tr>
+					</table>
+				</div>
+				<div id="boardTiles" style="float:left; width:570px; height:570px;"></div>
+			</div>
+		</div>
+		
+		</div>
+
+		<div id="debugDiv" style="width:570px; margin-left:auto; margin-right:auto; display:none; background-color:#000;">
+			<textarea id="debugOut" rows="20" cols="78"></textarea>
+			<table><tr>
+				<td><button type="button" onclick="SaveState(); return false;">Save</button></td>
+				<td><button type="button" onclick="RestoreState(); return false;">Restore</button></td>
+			</tr></table>
+		</div>
+					
+	</body>
+</html>
